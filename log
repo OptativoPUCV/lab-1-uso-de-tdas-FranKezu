@@ -97,3 +97,9 @@ arraylist.h:17:6: note: expected 'void *' but argument is of type 'int'
 cc1.exe: all warnings being treated as errors
 Compilation failed
 31b7ee2
+Wed, Mar 19, 2025  8:52:03 AM: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|5
+total_score: 0/70
+ef5e320
