@@ -28,7 +28,7 @@ void imprime_y_vacia_pila(Stack *P) {
    void *dato;
    printf("[");
    while((dato = pop(P)) != NULL) {
-      printf("%d ", *(int*)dato);
+      printf("%d ", &(*(int*)dato));
    }
    printf("]\n");
 }

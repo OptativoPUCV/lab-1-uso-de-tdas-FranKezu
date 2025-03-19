@@ -24,3 +24,23 @@ arraylist.h:20:6: note: expected 'void *' but argument is of type 'int'
 cc1.exe: all warnings being treated as errors
 Compilation failed
 53a0aa4
+Wed, Mar 19, 2025  8:40:53 AM: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'imprime_y_vacia_pila':
+exercises.c:31:16: error: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Werror=format=]
+       printf("%d ", &(*(int*)dato));
+                ^
+exercises.c: In function 'crea_lista':
+exercises.c:48:19: error: passing argument 2 of 'pushBack' makes pointer from integer without a cast [-Werror=int-conversion]
+       pushBack(L, *(int*)i);
+                   ^
+In file included from exercises.c:6:0,
+                 from test.c:5:
+arraylist.h:20:6: note: expected 'void *' but argument is of type 'int'
+ void pushBack(List *L, void *dato);
+      ^~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+701172a
