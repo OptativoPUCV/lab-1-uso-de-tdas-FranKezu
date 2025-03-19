@@ -128,7 +128,7 @@ int parentesisBalanceados(char *cadena) {
    char simbolos[6] = {'(', '{', '[', ')', '}', ']'};
 
    for(size_t i = 0 ; cadena[i] != '\0' ; i++){
-      for(size_t j = 0 ; j < 6 ; j++){
+      for(size_t j = 0 ; j <= 6 ; j++){
          if((simbolos[j] == cadena[i]) && (j < 3)) balance++;
          else if ((simbolos[j] == cadena[i]) && (j >= 3)) balance--;
       }
