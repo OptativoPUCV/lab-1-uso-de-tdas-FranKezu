@@ -154,3 +154,22 @@ Wed, Mar 19, 2025  9:02:51 AM:
  tests:  2|3
 total_score: 20/70
 37dd3e4
+Wed, Mar 19, 2025  9:05:43 AM: 
+ exercises.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+In file included from test.c:5:0:
+exercises.c: In function 'eliminaElementos':
+exercises.c:87:17: error: comparison between pointer and integer [-Werror]
+       if(numero == elem) popCurrent(numero);
+                 ^~
+exercises.c:87:37: error: passing argument 1 of 'popCurrent' from incompatible pointer type [-Werror=incompatible-pointer-types]
+       if(numero == elem) popCurrent(numero);
+                                     ^~~~~~
+In file included from exercises.c:6:0,
+                 from test.c:5:
+arraylist.h:32:7: note: expected 'List * {aka struct List *}' but argument is of type 'int *'
+ void *popCurrent(List *L);
+       ^~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+18d3268
