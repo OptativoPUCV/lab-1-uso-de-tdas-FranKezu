@@ -81,3 +81,19 @@ Wed, Mar 19, 2025  8:46:31 AM:
  tests:  0|5
 total_score: 0/70
 cb071bb
+Wed, Mar 19, 2025  8:49:54 AM: 
+ exercises.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'crea_lista':
+exercises.c:50:20: error: passing argument 2 of 'pushFront' makes pointer from integer without a cast [-Werror=int-conversion]
+       pushFront(L, i);
+                    ^
+In file included from exercises.c:6:0,
+                 from test.c:5:
+arraylist.h:17:6: note: expected 'void *' but argument is of type 'int'
+ void pushFront(List *L, void *dato);
+      ^~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+31b7ee2
