@@ -105,7 +105,7 @@ void copia_pila(Stack* P1, Stack* P2) {
       int *numero = (int *) malloc(sizeof(int));
       *numero = *numP1;
 
-      pushBack(P2, numero);
+      push(P2, numero);
 
       numP1 = next(P1);
    }
