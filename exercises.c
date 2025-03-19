@@ -47,7 +47,7 @@ List* crea_lista() {
    for(int i = 1 ; i <= 10 ; i++){
       int *numero = (int *) malloc(sizeof(int));
       *numero = i;
-      pushFront(L, numero);
+      pushBack(L, numero);
    }
 
    return L;
