@@ -28,7 +28,7 @@ void imprime_y_vacia_pila(Stack *P) {
    void *dato;
    printf("[");
    while((dato = pop(P)) != NULL) {
-      printf("%d ", &(*(int*)dato));
+      printf("%d ", *(int*)dato);
    }
    printf("]\n");
 }
@@ -45,7 +45,7 @@ List* crea_lista() {
    List* L = create_list();
 
    for(int i = 0 ; i < 10 ; i++){
-      pushBack(L, *(int*)i);
+      pushBack(L, &(*(int*)i));
    }
 
    return L;
