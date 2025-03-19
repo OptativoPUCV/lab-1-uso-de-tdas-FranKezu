@@ -184,3 +184,20 @@ exercises.c:87:17: error: comparison between pointer and integer [-Werror]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 d7500b7
+Wed, Mar 19, 2025  9:10:12 AM: 
+ exercises.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'copia_pila':
+exercises.c:103:10: error: 'numero' undeclared (first use in this function)
+    while(numero != NULL){
+          ^~~~~~
+exercises.c:103:10: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:104:20: error: 'elem' undeclared (first use in this function)
+       if(numero == elem) popCurrent(L);
+                    ^~~~
+exercises.c:104:37: error: 'L' undeclared (first use in this function)
+       if(numero == elem) popCurrent(L);
+                                     ^
+Compilation failed
+e59a917
