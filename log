@@ -201,3 +201,9 @@ exercises.c:104:37: error: 'L' undeclared (first use in this function)
                                      ^
 Compilation failed
 e59a917
+Wed, Mar 19, 2025  9:12:23 AM: 
+ exercises.c | 6 ------
+ 1 file changed, 6 deletions(-)
+ tests:  3|2
+total_score: 40/70
+3eaa452
