@@ -173,3 +173,14 @@ arraylist.h:32:7: note: expected 'List * {aka struct List *}' but argument is of
 cc1.exe: all warnings being treated as errors
 Compilation failed
 18d3268
+Wed, Mar 19, 2025  9:08:03 AM: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'eliminaElementos':
+exercises.c:87:17: error: comparison between pointer and integer [-Werror]
+       if(numero == elem) popCurrent(L);
+                 ^~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+d7500b7
