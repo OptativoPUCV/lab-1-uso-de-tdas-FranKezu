@@ -130,7 +130,8 @@ size_t len(char *cadena) {
    return i;
 }
 
-int parentesisBalanceados(char *cadena) {
+/* FORMA SIN USO DE STACK
+int parentesisBalanceados(char *cadena) { 
 
    char chars[6] = {'(', '{', '[', ')', '}', ']'};
 
@@ -148,4 +149,26 @@ int parentesisBalanceados(char *cadena) {
 
    return 1;
 }
+*/
 
+int parentesisBalanceados(char *cadena) { 
+
+   size_t largo = len(cadena);
+   if(largo % 2 != 0) return 0;
+
+   Stack* Aux = create_stack();
+
+   for(size_t i = 0 ; i < (largo / 2) ; i++){
+      if(cadena[i] == ')' || cadena [i] == '}' || cadena[i] == ']')
+         return 0;
+      push(Aux, cadena[i]);
+   }
+
+   for(size_t i = (largo / 2) ; cadena[i] != '\0' ; i++){
+      if(cadena[i] == ')' && top(Aux) != '(' || cadena[i] == '}' && top(Aux) != '{' || cadena[i] == ']' && top(Aux) != '[')
+         return 0;
+      pop(Aux);
+   }
+
+   return 1;
+}
