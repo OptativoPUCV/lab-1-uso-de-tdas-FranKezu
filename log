@@ -793,3 +793,19 @@ stack.h:11:31: note: expected 'void *' but argument is of type 'char'
       |                         ~~~~~~^~~~
 Compilation failed
 7465d89
+Thu, Mar 20, 2025 11:58:30 AM: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:156:28: error: passing argument 2 of 'pushFront' makes pointer from integer without a cast [-Wint-conversion]
+  156 |       pushFront(Aux, cadena[i]);
+      |                      ~~~~~~^~~
+      |                            |
+      |                            char
+In file included from exercises.c:6:
+arraylist.h:17:31: note: expected 'void *' but argument is of type 'char'
+   17 | void pushFront(List *L, void *dato);
+      |                         ~~~~~~^~~~
+Compilation failed
+d90d72d
