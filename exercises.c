@@ -165,5 +165,5 @@ int parentesisBalanceados(char *cadena) {
       pop(Aux);
    }
 
-   return 0;
+   return 1;
 }
