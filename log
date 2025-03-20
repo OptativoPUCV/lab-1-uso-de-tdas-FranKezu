@@ -296,3 +296,13 @@ exercises.c:132:11: error: unused variable 'der' [-Werror=unused-variable]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 5148476
+Wed, Mar 19, 2025  9:46:51 PM: 
+ exercises.c | 2 --
+ 1 file changed, 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:129:19: error: implicit declaration of function 'len' [-Wimplicit-function-declaration]
+  129 |    size_t largo = len(cadena);
+      |                   ^~~
+Compilation failed
+ec6f79c
