@@ -567,3 +567,36 @@ exercises.c:167:1: error: control reaches end of non-void function [-Werror=retu
 cc1.exe: all warnings being treated as errors
 Compilation failed
 dd1f40c
+Thu, Mar 20, 2025 11:47:48 AM: 
+In file included from test.c:5:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:156:23: error: passing argument 2 of 'push' makes pointer from integer without a cast [-Wint-conversion]
+  156 |       push(Aux, cadena[i]);
+      |                 ~~~~~~^~~
+      |                       |
+      |                       char
+In file included from exercises.c:7:
+stack.h:11:31: note: expected 'void *' but argument is of type 'char'
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:161:39: error: comparison between pointer and integer [-Werror]
+  161 |       if(cadena[i] == ')' && top(Aux) != '(' || cadena[i] == '}' && top(Aux) != '{' || cadena[i] == ']' && top(Aux) != '[')
+      |                                       ^~
+exercises.c:161:78: error: comparison between pointer and integer [-Werror]
+  161 |       if(cadena[i] == ')' && top(Aux) != '(' || cadena[i] == '}' && top(Aux) != '{' || cadena[i] == ']' && top(Aux) != '[')
+      |                                                                              ^~
+exercises.c:161:27: error: suggest parentheses around '&&' within '||' [-Werror=parentheses]
+  161 |       if(cadena[i] == ')' && top(Aux) != '(' || cadena[i] == '}' && top(Aux) != '{' || cadena[i] == ']' && top(Aux) != '[')
+      |          ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+exercises.c:161:117: error: comparison between pointer and integer [-Werror]
+  161 |       if(cadena[i] == ')' && top(Aux) != '(' || cadena[i] == '}' && top(Aux) != '{' || cadena[i] == ']' && top(Aux) != '[')
+      |                                                                                                                     ^~
+exercises.c:161:105: error: suggest parentheses around '&&' within '||' [-Werror=parentheses]
+  161 |       if(cadena[i] == ')' && top(Aux) != '(' || cadena[i] == '}' && top(Aux) != '{' || cadena[i] == ']' && top(Aux) != '[')
+      |                                                                                        ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+exercises.c:167:1: error: control reaches end of non-void function [-Werror=return-type]
+  167 | }
+      | ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+0365b3e
