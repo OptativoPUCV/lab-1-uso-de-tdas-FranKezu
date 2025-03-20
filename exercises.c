@@ -122,6 +122,14 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 0 en caso contrario.
 */
 
+size_t len(char *cadena) {
+   size_t i = 0;
+   while (cadena[i] != '\0') {
+      i++;
+   }
+   return i;
+}
+
 int parentesisBalanceados(char *cadena) {
 
    char chars[6] = {'(', '{', '[', ')', '}', ']'};

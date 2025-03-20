@@ -306,3 +306,9 @@ exercises.c:129:19: error: implicit declaration of function 'len' [-Wimplicit-fu
       |                   ^~~
 Compilation failed
 ec6f79c
+Wed, Mar 19, 2025  9:48:42 PM: 
+ exercises.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+ tests:  9|0
+total_score: 70/70
+cd52506
