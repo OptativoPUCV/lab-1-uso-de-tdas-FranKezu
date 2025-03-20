@@ -809,3 +809,9 @@ arraylist.h:17:31: note: expected 'void *' but argument is of type 'char'
       |                         ~~~~~~^~~~
 Compilation failed
 d90d72d
+Thu, Mar 20, 2025 12:01:22 PM: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|1
+total_score: 50/70
+402382a
