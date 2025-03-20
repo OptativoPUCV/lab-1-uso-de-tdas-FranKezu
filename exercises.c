@@ -141,9 +141,7 @@ int parentesisBalanceados(char *cadena) {
       for(size_t j = 0 ; j < (largo / 2) ; j++){
          if(chars[j] == cadena[i]){
             if(j >= 3) return 0;
-            else{
-               if(cadena[largo - 1 - i] != chars[j + 3]) return 0;
-            }
+            else if(cadena[largo - 1 - i] != chars[j + 3]) return 0;
          }
       }
    }
