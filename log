@@ -632,3 +632,38 @@ exercises.c:169:1: error: control reaches end of non-void function [-Werror=retu
 cc1.exe: all warnings being treated as errors
 Compilation failed
 2f36126
+Thu, Mar 20, 2025 11:49:38 AM: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:156:23: error: passing argument 2 of 'push' makes pointer from integer without a cast [-Wint-conversion]
+  156 |       push(Aux, cadena[i]);
+      |                 ~~~~~~^~~
+      |                       |
+      |                       char
+In file included from exercises.c:7:
+stack.h:11:31: note: expected 'void *' but argument is of type 'char'
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:163:39: error: comparison between pointer and integer [-Werror]
+  163 |       if(cadena[i] == ')' && elemento != '(' || cadena[i] == '}' && elemento != '{' || cadena[i] == ']' && elemento != '[')
+      |                                       ^~
+exercises.c:163:78: error: comparison between pointer and integer [-Werror]
+  163 |       if(cadena[i] == ')' && elemento != '(' || cadena[i] == '}' && elemento != '{' || cadena[i] == ']' && elemento != '[')
+      |                                                                              ^~
+exercises.c:163:27: error: suggest parentheses around '&&' within '||' [-Werror=parentheses]
+  163 |       if(cadena[i] == ')' && elemento != '(' || cadena[i] == '}' && elemento != '{' || cadena[i] == ']' && elemento != '[')
+      |          ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+exercises.c:163:117: error: comparison between pointer and integer [-Werror]
+  163 |       if(cadena[i] == ')' && elemento != '(' || cadena[i] == '}' && elemento != '{' || cadena[i] == ']' && elemento != '[')
+      |                                                                                                                     ^~
+exercises.c:163:105: error: suggest parentheses around '&&' within '||' [-Werror=parentheses]
+  163 |       if(cadena[i] == ')' && elemento != '(' || cadena[i] == '}' && elemento != '{' || cadena[i] == ']' && elemento != '[')
+      |                                                                                        ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+exercises.c:169:1: error: control reaches end of non-void function [-Werror=return-type]
+  169 | }
+      | ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+e52d333
