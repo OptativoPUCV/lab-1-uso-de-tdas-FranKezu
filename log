@@ -723,3 +723,29 @@ exercises.c:163:105: error: suggest parentheses around '&&' within '||' [-Werror
 cc1.exe: all warnings being treated as errors
 Compilation failed
 4028de7
+Thu, Mar 20, 2025 11:53:26 AM: 
+ exercises.c | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+In file included from test.c:5:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:156:23: error: passing argument 2 of 'push' makes pointer from integer without a cast [-Wint-conversion]
+  156 |       push(Aux, cadena[i]);
+      |                 ~~~~~~^~~
+      |                       |
+      |                       char
+In file included from exercises.c:7:
+stack.h:11:31: note: expected 'void *' but argument is of type 'char'
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:161:40: error: comparison between pointer and integer [-Werror]
+  161 |       if((cadena[i] == ')' && top(Aux) != '(') || (cadena[i] == '}' && top(Aux) != '{') || (cadena[i] == ']' && top(Aux) != '['))
+      |                                        ^~
+exercises.c:161:81: error: comparison between pointer and integer [-Werror]
+  161 |       if((cadena[i] == ')' && top(Aux) != '(') || (cadena[i] == '}' && top(Aux) != '{') || (cadena[i] == ']' && top(Aux) != '['))
+      |                                                                                 ^~
+exercises.c:161:122: error: comparison between pointer and integer [-Werror]
+  161 |       if((cadena[i] == ')' && top(Aux) != '(') || (cadena[i] == '}' && top(Aux) != '{') || (cadena[i] == ']' && top(Aux) != '['))
+      |                                                                                                                          ^~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+572310a
