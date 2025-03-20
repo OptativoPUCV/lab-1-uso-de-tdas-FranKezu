@@ -143,6 +143,7 @@ int parentesisBalanceados(char *cadena) {
 }
 */
 
+//FORMA CON PILA
 int parentesisBalanceados(char *cadena) { 
 
    size_t largo = strlen(cadena);
