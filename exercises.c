@@ -123,17 +123,25 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
-   int balance = 0;
 
-   char simbolos[6] = {'(', '{', '[', ')', '}', ']'};
+   char chars[6] = {'(', '{', '[', ')', '}', ']'};
+
+   size_t largo = len(cadena);
+   if(largo % 2 != 0) return 0;
+
+   size_t der = len(cadena) - 1;
 
    for(size_t i = 0 ; cadena[i] != '\0' ; i++){
-      for(size_t j = 0 ; j <= 6 ; j++){
-         if((simbolos[j] == cadena[i]) && (j < 3)) balance++;
-         else if ((simbolos[j] == cadena[i]) && (j >= 3)) balance--;
+      for(size_t j = 0 ; j < (largo / 2) ; j++){
+         if(chars[j] == cadena[i]){
+            if(j >= 3) return 0;
+            else{
+               if(cadena[largo - 1 - i] != chars[j + 3]) return 0;
+            }
+         }
       }
    }
 
-   return balance == 0;
+   return 1;
 }
 

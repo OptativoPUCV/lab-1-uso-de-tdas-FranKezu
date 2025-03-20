@@ -282,3 +282,17 @@ Wed, Mar 19, 2025  8:30:05 PM:
  tests:  7|1
 total_score: 60/70
 f5e9c4a
+Wed, Mar 19, 2025  9:46:28 PM: 
+ exercises.c | 20 ++++++++++++++------
+ 1 file changed, 14 insertions(+), 6 deletions(-)
+In file included from test.c:5:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:129:19: error: implicit declaration of function 'len' [-Wimplicit-function-declaration]
+  129 |    size_t largo = len(cadena);
+      |                   ^~~
+exercises.c:132:11: error: unused variable 'der' [-Werror=unused-variable]
+  132 |    size_t der = len(cadena) - 1;
+      |           ^~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+5148476
